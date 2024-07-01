@@ -1,0 +1,41 @@
+.player {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.back-icon img {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.spinner-icon {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.trailer iframe {
+    width: 90vw;
+    height: 85vh;
+    border-radius: 10px;
+}
+
+.movie-info {
+    margin-top: 15px;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: none;
+    font-size: 20px;
+}
+
+.movie-published-date span {
+    font-style: italic;
+}

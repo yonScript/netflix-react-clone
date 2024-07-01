@@ -1,0 +1,59 @@
+.movies-grid {
+    margin-top: 0;
+}
+
+.movies-grid img {
+    width: 30vw !important;
+}
+
+.movies-type p {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 6%;
+    font-size: 2.5vw;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.movie-cards {
+    margin-left: 8%;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+.movie-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-card {
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: scale(1.01);
+}
+
+.movie-card img:hover {
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-card img {
+    width: 240px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.poster-movies-grid {
+    margin-top: -150px;
+    margin-bottom: 30px;
+}
+
+.poster-movies-grid p {
+    font-size: 3vw;
+    margin-bottom: 20px;
+}
+
+.poster-movies-grid img {
+    width: 20vw !important;
+}
