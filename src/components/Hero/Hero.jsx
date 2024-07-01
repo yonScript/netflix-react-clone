@@ -41,13 +41,9 @@ const Hero = () => {
             try {
                 const response = await tmdb.get(requests.fetchNetflixOriginals);
                 const movies = response.data.results;
+                const randomIndex = Math.floor(Math.random() * movies.length);
 
-                if (movies.length > 0) {
-                    const randomIndex = Math.floor(
-                        Math.random() * movies.length
-                    );
-                    setMovie(movies[randomIndex]);
-                }
+                setMovie(movies[randomIndex]);
             } catch (error) {
                 console.error("Failed to fetch Netflix Originals:", error);
             }
@@ -85,17 +81,15 @@ const Hero = () => {
             </div>
 
             <div className="hero-buttons">
-                {movie && (
-                    <Link
-                        onClick={handlePlayClick(movie)}
-                        to={`/player/${movie.id}`}
-                    >
-                        <button className="button">
-                            <img src={play_icon} alt="Play Icon" />
-                            Play
-                        </button>
-                    </Link>
-                )}
+                <Link
+                    onClick={() => handlePlayClick(movie || {})}
+                    to={`/player/${movie?.id}`}
+                >
+                    <button className="button">
+                        <img src={play_icon} alt="Play Icon" />
+                        Play
+                    </button>
+                </Link>
 
                 <button className="button dark-button">
                     <img src={info_icon} alt="Info Icon" />

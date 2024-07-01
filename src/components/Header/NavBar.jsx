@@ -11,7 +11,7 @@ import profile_img from "../../assets/profile_img.png";
 import caret_icon from "../../assets/caret_icon.svg";
 
 const NavBar = () => {
-    const [scrolled, setScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,10 +23,6 @@ const NavBar = () => {
         };
 
         window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
     }, []);
 
     return (
