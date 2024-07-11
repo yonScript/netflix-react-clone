@@ -16,7 +16,7 @@ To get started with the Netflix clone app, follow these steps:
 
 1. Clone the repository:
 
-    - git clone https://github.com/johngithub14/netflix-project.git
+    - git clone https://github.com/johngithub14/netflix-react-clone.git
 
 2. Navigate to the project directory:
 
