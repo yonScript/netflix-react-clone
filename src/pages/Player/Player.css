@@ -36,6 +36,19 @@
     font-size: 20px;
 }
 
+.movie-info span {
+    margin-left: 10px;
+}
+
 .movie-published-date span {
     font-style: italic;
+}
+
+@media (max-width: 800px) {
+    .back-icon img {
+        width: 50px;
+    }
+    .movie-info {
+        font-size: 15px;
+    }
 }

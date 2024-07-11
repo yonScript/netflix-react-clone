@@ -59,6 +59,7 @@ const MovieCard = ({ moviesType, fetchMoviesURL, isCardPoster }) => {
             <div className="movies-type">
                 <p>{moviesType}</p>
             </div>
+
             <div className="movie-cards" ref={cardsRef}>
                 {movies.map((movie) => (
                     <Link

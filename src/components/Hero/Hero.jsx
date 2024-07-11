@@ -82,7 +82,7 @@ const Hero = () => {
 
             <div className="hero-buttons">
                 <Link
-                    onClick={() => handlePlayClick(movie || {})}
+                    onClick={() => handlePlayClick(movie)}
                     to={`/player/${movie?.id}`}
                 >
                     <button className="button">

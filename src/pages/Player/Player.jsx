@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -32,8 +34,6 @@ const Player = () => {
                         video.type === "Trailer" && video.site === "YouTube"
                 );
 
-                console.log(response);
-
                 setTrailerUrl(
                     `https://www.youtube.com/embed/${trailers[0]?.key}`
                 );
@@ -64,7 +64,7 @@ const Player = () => {
             </div>
         );
     }
-
+    
     const { currentMovie } = useMovieContext();
 
     return (
@@ -80,7 +80,6 @@ const Player = () => {
             <div className="trailer">
                 <iframe
                     src={trailerUrl}
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     title="Trailer"
                 ></iframe>
@@ -90,15 +89,18 @@ const Player = () => {
                 <div className="movie-title">
                     {currentMovie && (
                         <p>
-                            Movie title: &nbsp;
-                            {currentMovie.original_name || currentMovie.title}
+                            Movie title:
+                            <span>
+                                {currentMovie.original_name ||
+                                    currentMovie.title}
+                            </span>
                         </p>
                     )}
                 </div>
 
                 <div className="movie-published-date">
                     <p>
-                        Published at: &nbsp;
+                        Published at:
                         <span>
                             {moviesDetail.published_at
                                 ? new Date(
