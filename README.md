@@ -28,7 +28,7 @@ To get started with the Netflix clone app, follow these steps:
 
 4. Create a new file called `.env` in the root directory and add your API key from The Movie Database (TMDb):
 
-    - REACT_APP_API_KEY=your_tmdb_api_key
+    - REACT_APP_API_KEY = your_tmdb_api_key
 
 5. Open the app in your browser at `http://localhost:3000`.
 
